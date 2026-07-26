@@ -1,8 +1,25 @@
 aid: ecreditcom
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ecreditcom.png
 name: eCredit.com
-description: eCredit.com is a company surfaced as a portfolio company of battery-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  eCredit.com was an online trade-credit and credit-decisioning company, surfaced in the API
+  Evangelist network as a Battery Ventures portfolio company. It no longer operates independently. The
+  ecredit.com domain is delegated to Moody's nameservers and 301-redirects in full to Moody's trade-credit
+  offering, where "Moody's eCredit" now exists as a platform within Moody's Trade Credit product line.
+  Enrichment probes confirm no independent developer portal, documentation, API specification, or
+  /.well-known surface remains on ecredit.com. Any live API capability for this product is delivered
+  through Moody's, which is profiled separately in the network as the successor company.
 url: https://raw.githubusercontent.com/api-evangelist/ecreditcom/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +27,43 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: absorbed
+x-status-note: >-
+  Re-confirmed 2026-07-20. ecredit.com, www.ecredit.com and http://ecredit.com all return HTTP 301 to
+  Moody's trade-credit page, and the domain's NS records are delegated to moodys.com nameservers
+  (ns1-ns6.moodys.com), so the domain is operated by Moody's rather than merely parked. Every
+  /.well-known probe (security.txt, api-catalog, ai-plugin.json, openid-configuration,
+  oauth-authorization-server) and /llms.txt returns 301 off-domain. Moody's trade-credit page names
+  "Moody's eCredit" as a platform in a customer case study and offers API/bulk-feed access only through
+  Moody's. No independent eCredit.com developer or API surface exists; see all/moodys for the successor.
+x-redirects-to: https://www.moodys.com/web/en/us/who-we-serve/corporations/trade-credit.html
+x-successor: moodys
+x-probe:
+  date: '2026-07-20'
+  http_status: 301
+  nameservers: moodys.com
+  well_known: none
+  domain_security: no-hosts
+  vulnerability_disclosure: none
+  trust_center: none
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Trade Credit
+- Credit Risk
+- Credit Decisioning
+- Financial Services
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
