@@ -46,7 +46,7 @@ x-probe:
   domain_security: no-hosts
   vulnerability_disclosure: none
   trust_center: none
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
