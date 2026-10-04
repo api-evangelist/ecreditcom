@@ -65,7 +65,7 @@ tags:
 - Trade Credit
 - Credit Risk
 - Credit Decisioning
-- Financial-Services
+- Financial Services
 - Acquired
 tags_raw:
 - Company
@@ -74,6 +74,7 @@ tags_raw:
 - Credit Decisioning
 - Financial Services
 - Acquired
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
